@@ -18,21 +18,18 @@
 
 ## 📌 Overview
 
-Professional TCP port scanner — scan, discover, fingerprint
+OPortX is a threaded TCP connect port scanner. It scans single ports, ranges or common-port presets, performs host discovery across a range, and can grab service banners. Results can be exported as TXT, CSV or JSON.
 
 ---
 
 ## ✨ Features
 
-- Threaded TCP connect scanner (single / range / list)
-- Common-ports preset (top services) one-shot scan
-- Host discovery across a CIDR / range (TCP ping)
-- Service fingerprint via well-known port map + banner
+- Threaded TCP connect scanning of single ports, ranges or lists
+- Common-ports preset for quick one-shot scans
+- Host discovery across a CIDR or range
+- Service fingerprinting via a well-known port map and banners
 - Banner grabbing with safe timeouts
-- Live progress bar, open/closed/filtered summary
-- Save report (TXT / CSV / JSON) with location chooser
-- Clipboard export of open-port list
-- Full CLI mode (-t host -p 1-1024 ...) for scripting
+- Open/closed/filtered summary with TXT/CSV/JSON export
 
 ---
 
@@ -46,7 +43,10 @@ Professional TCP port scanner — scan, discover, fingerprint
 ## 🚀 Usage
 
 ```bash
-./OPortX
+./OPortX -t 192.168.1.1 -p common
+./OPortX -t example.com -p 1-1024 -b
+./OPortX -t 10.0.0.5 -p 22,80,443 --json
+./OPortX --help
 ```
 
 ---
